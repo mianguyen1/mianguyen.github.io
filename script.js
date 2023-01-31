@@ -1,22 +1,29 @@
-function displayTime(){
-    var dateTime = new Date();
-    var hrs = dateTime.getHours();
-    var min = dateTime.getMinutes();
-    var sec = dateTime.getSeconds();
-    var session = document.getElementById('session');
-
-    if(hrs >= 12){
-        session.innerHTML = 'PM';
-    }else{
-        session.innerHTML = 'AM';
+function check() {
+    var q1=document.quiz.question1.value;
+    var q2=document.quiz.question2.value;
+    var q3=document.quiz.question3.value;
+    var q4=document.quiz.question4.value;
+    var q5=document.quiz.question5.value;
+    var result = document.getElementById("result");
+  
+    let score = 0;
+  
+    if (q1=="1910-1914") {score++}
+    if (q2=="1917") {score++}
+    if (q3=="1939-1945") {score++}
+    if (q4=="Mauno") {score++}
+    if (q5=="1990") {score++}
+  
+    if (score == 0) {
+      document.getElementById("result").innerHTML = "Yritä uudelleen!";
     }
-
-    if(hrs > 12){
-        hrs = hrs - 12;
+      else if (score <= 3) {
+      document.getElementById("result").innerHTML = "Pisteesi on " + score + "/5" + " Yritä uudelleen!";
+  
+    } else {
+      document.getElementById("result").innerHTML = "Pisteesi on " + score + "/5" + " Hienoa työtä!";
     }
-
-    document.getElementById('hours').innerHTML = hrs;
-    document.getElementById('minutes').innerHTML = min;
-    document.getElementById('seconds').innerHTML = sec;
-}
-setInterval(displayTime, 10);
+   
+  }
+  
+  
