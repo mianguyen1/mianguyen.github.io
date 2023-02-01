@@ -2,4 +2,4 @@
 
 Web-tekniikan kurssin koodit
 
-Mia Nguyen
+Oulun ammattikorkean koulun it-tradenomin opiskelija Mia Nguyen
